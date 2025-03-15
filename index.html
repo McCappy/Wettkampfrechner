@@ -218,7 +218,7 @@
 
 <!-- Ergebnis-Anzeige -->
 <div class="score-area">
-  <strong>Ergebnis Schoet:</strong> <span id="ergebnisSchoet">0</span><br />
+  <strong>Ergebnis Schoet:</strong> <span id="ergebnisSchoet">0.0</span><br />
   <strong>Ergebnis Meter:</strong> <span id="ergebnisMeter">0</span>
 </div>
 
@@ -322,17 +322,20 @@
       meterDiff = -leftover;
     }
     
-    // Zusätzliche Anpassung: 
-    // Wenn der untere Bereich grün ist und das Ergebnis positiv, -0,5 abziehen.
-    // Wenn der obere Bereich grün ist und das Ergebnis negativ, +0,5 addieren.
+    // Zusätzliche Anpassung:
+    // - Wenn der untere Bereich grün ist und das Ergebnis positiv, -0,5 abziehen.
+    // - Wenn der obere Bereich grün ist und das Ergebnis negativ, +0,5 addieren.
     if (bottomTeam.classList.contains("green") && schoeetDiff > 0) {
       schoeetDiff -= 0.5;
     } else if (topTeam.classList.contains("green") && schoeetDiff < 0) {
       schoeetDiff += 0.5;
     }
     
-    ergebnisSchoet.textContent = schoeetDiff;
-    ergebnisMeter.textContent = meterDiff;
+    // Ergebnisse formatieren:
+    // - Schoet-Ergebnis mit 1 Kommastelle.
+    // - Meter-Ergebnis als ganze Zahl.
+    ergebnisSchoet.textContent = schoeetDiff.toFixed(1);
+    ergebnisMeter.textContent = meterDiff.toFixed(0);
   }
 
   // Reset-Funktion
@@ -351,8 +354,8 @@
     bottomMeterInput.value = 0;
     document.getElementById("topVerein").value = "";
     document.getElementById("bottomVerein").value = "";
-    ergebnisSchoet.textContent = 0;
-    ergebnisMeter.textContent = 0;
+    ergebnisSchoet.textContent = "0.0";
+    ergebnisMeter.textContent = "0";
     genderSelect.value = "men";
     topTeam.classList.remove("green");
     topTeam.classList.add("red");
