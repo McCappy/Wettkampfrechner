@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>Boßeln Scoreboard</title>
-  <!-- Sorgt dafür, dass die Seite auf mobilen Geräten besser skaliert -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -49,8 +48,6 @@
       margin-left: 10px;
       margin-right: 10px;
     }
-
-    /* Für kleine Bildschirme können wir z.B. die Tabelle scrollbar machen */
     .table-container {
       overflow-x: auto;
     }
@@ -67,7 +64,6 @@
     <option value="men">Männer</option>
     <option value="women">Frauen</option>
   </select>
-
   <button id="resetBtn">RESET</button>
 </div>
 
@@ -82,13 +78,12 @@
   &nbsp;Meter: <input type="number" id="topMeterInput" value="0" />
 </div>
 
-<!-- Tabelle mit Runden, Werfern, Checkboxen (Oberes + Unteres Team) -->
+<!-- Tabelle mit Runden, Werfern, Checkboxen -->
 <div class="table-container">
   <table>
     <thead>
       <tr>
         <th>Runden</th>
-        <!-- 15 Spalten für Runden -->
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
         <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
         <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
@@ -98,85 +93,115 @@
       <!-- Oberes Team: Werfer 1-4 + Ersatz 1 -->
       <tr>
         <td><input type="text" placeholder="Werfer 1" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Werfer 2" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Werfer 3" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Werfer 4" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Ersatz 1" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
 
       <!-- Unteres Team: Werfer 1-4 + Ersatz 1 -->
       <tr>
         <td><input type="text" placeholder="Werfer 1" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Werfer 2" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Werfer 3" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Werfer 4" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
       <tr>
         <td><input type="text" placeholder="Ersatz 1" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
-        <td><input type="checkbox" /></td><td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td><td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
       </tr>
     </tbody>
   </table>
@@ -198,9 +223,7 @@
 </div>
 
 <script>
-  // -----------------------------
   // Element-Referenzen
-  // -----------------------------
   const topTeam = document.getElementById("topTeam");
   const bottomTeam = document.getElementById("bottomTeam");
 
@@ -220,21 +243,14 @@
   const ergebnisMeter = document.getElementById("ergebnisMeter");
 
   const genderSelect = document.getElementById("genderSelect");
-
   const resetBtn = document.getElementById("resetBtn");
 
-  // -----------------------------
   // Globale Variablen für Schoet
-  // -----------------------------
   let topSchoet = 0;
   let bottomSchoet = 0;
 
-  // -----------------------------
   // Farb-Umschaltung ("Führung")
-  // -----------------------------
-  // Oberer Button
   topTeamToggleBtn.addEventListener("click", () => {
-    // Top-Team rot <-> grün
     if (topTeam.classList.contains("red")) {
       topTeam.classList.remove("red");
       topTeam.classList.add("green");
@@ -242,7 +258,6 @@
       topTeam.classList.remove("green");
       topTeam.classList.add("red");
     }
-    // Gleichzeitig das untere Team umschalten
     if (bottomTeam.classList.contains("green")) {
       bottomTeam.classList.remove("green");
       bottomTeam.classList.add("red");
@@ -253,9 +268,7 @@
     calculateResult();
   });
 
-  // Unterer Button
   bottomTeamToggleBtn.addEventListener("click", () => {
-    // Bottom-Team rot <-> grün
     if (bottomTeam.classList.contains("green")) {
       bottomTeam.classList.remove("green");
       bottomTeam.classList.add("red");
@@ -263,7 +276,6 @@
       bottomTeam.classList.remove("red");
       bottomTeam.classList.add("green");
     }
-    // Gleichzeitig das obere Team umschalten
     if (topTeam.classList.contains("red")) {
       topTeam.classList.remove("red");
       topTeam.classList.add("green");
@@ -274,9 +286,7 @@
     calculateResult();
   });
 
-  // -----------------------------
   // Schoet-Knöpfe
-  // -----------------------------
   topSchoetBtn.addEventListener("click", () => {
     topSchoet++;
     topSchoetDisplay.textContent = topSchoet;
@@ -289,82 +299,61 @@
     calculateResult();
   });
 
-  // -----------------------------
   // Meter-Eingaben
-  // -----------------------------
   topMeterInput.addEventListener("input", calculateResult);
   bottomMeterInput.addEventListener("input", calculateResult);
 
-  // -----------------------------
   // Ergebnis-Berechnung
-  // -----------------------------
   function calculateResult() {
-    // Differenzen berechnen
     let meterDiff = parseInt(topMeterInput.value) - parseInt(bottomMeterInput.value);
     let schoeetDiff = topSchoet - bottomSchoet;
-
-    // Geschlecht auslesen (Männer oder Frauen)
     let gender = genderSelect.value;
     let threshold = (gender === "men") ? 150 : 100;
 
-    // Absoluter Meterwert
     let absMeterDiff = Math.abs(meterDiff);
-    // Wie viele volle "threshold" passen hinein?
     let extraSchoet = Math.floor(absMeterDiff / threshold);
 
-    // Je nach Vorzeichen des meterDiff addieren oder abziehen
     if (meterDiff > 0) {
-      // Oben liegt bei Metern vorne
       schoeetDiff += extraSchoet;
-      meterDiff = meterDiff % threshold; // Rest
+      meterDiff = meterDiff % threshold;
     } else if (meterDiff < 0) {
-      // Unten liegt bei Metern vorne
       schoeetDiff -= extraSchoet;
       let leftover = absMeterDiff % threshold;
-      // leftover wird negativ
       meterDiff = -leftover;
     }
-
-    // Werte im UI anzeigen
+    
+    // Zusätzliche Anpassung: 
+    // Wenn der untere Bereich grün ist und das Ergebnis positiv, -0,5 abziehen.
+    // Wenn der obere Bereich grün ist und das Ergebnis negativ, +0,5 addieren.
+    if (bottomTeam.classList.contains("green") && schoeetDiff > 0) {
+      schoeetDiff -= 0.5;
+    } else if (topTeam.classList.contains("green") && schoeetDiff < 0) {
+      schoeetDiff += 0.5;
+    }
+    
     ergebnisSchoet.textContent = schoeetDiff;
     ergebnisMeter.textContent = meterDiff;
   }
 
-  // -----------------------------
   // Reset-Funktion
-  // -----------------------------
   resetBtn.addEventListener("click", () => {
-    // Namen in der Tabelle leeren
     document.querySelectorAll('tbody input[type="text"]').forEach(input => {
       input.value = "";
     });
-
-    // Alle Checkboxen deaktivieren
     document.querySelectorAll('tbody input[type="checkbox"]').forEach(checkbox => {
       checkbox.checked = false;
     });
-
-    // Schoet & Meter zurücksetzen
     topSchoet = 0;
     bottomSchoet = 0;
     topSchoetDisplay.textContent = 0;
     bottomSchoetDisplay.textContent = 0;
-
     topMeterInput.value = 0;
     bottomMeterInput.value = 0;
-
-    // Verein-Felder leeren
     document.getElementById("topVerein").value = "";
     document.getElementById("bottomVerein").value = "";
-
-    // Ergebnis zurücksetzen
     ergebnisSchoet.textContent = 0;
     ergebnisMeter.textContent = 0;
-
-    // Geschlecht auf Standard (Männer) zurück
     genderSelect.value = "men";
-
-    // Falls die Farben wieder auf Standard gesetzt werden sollen:
     topTeam.classList.remove("green");
     topTeam.classList.add("red");
     bottomTeam.classList.remove("red");
